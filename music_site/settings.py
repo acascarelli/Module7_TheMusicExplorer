@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-=&qskm$nl+tcnk87vju2g3a4_5c(mn5ul#fy%n=ot=y7z5g%4i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://module7-music-site.herokuapp.com/']
 
 
 # Application definition

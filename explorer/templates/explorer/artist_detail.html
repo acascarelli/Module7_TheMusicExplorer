@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ artist.name }}{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer/artist_detail.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="summary">
+        <h1>{{ artist.name}}</h1>
+        <ul>
+        {% for album in albums %}
+            <li>
+                <a href="{% url 'album_detail_page' album.slug %}">{{ album.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+{% endblock content %}

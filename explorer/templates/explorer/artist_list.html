@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer\artist_list.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div id="artists">
+        <h1>Artists</h1>
+        {% if artists %}
+            <ul>
+                {% for artist in artists %}
+                    <li>
+                        <a href="{% url 'artist_detail_page' artist.slug %}" class="artist_name">{{ artist.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p>Number of Artists: {{ artists.count }}</p>
+        {% else %}
+            <p>There are no artists to display</p>
+        {% endif %}
+    </div>
+{% endblock content %}

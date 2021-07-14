@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Manage Music {% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer\manage_music.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="manage">
+        <h2>How to manage the music database</h2>
+        <p>Django includes a pre-built system for managing data models with it's Admin class. If you wish to edit, delete or add to this music database you can do so by clicking <a href="{% url 'admin:index' %}">here</a></p>
+        <p>The login credentials are: </br>
+        Username: admin </br>
+        Password: admin </br>
+        </p>
+        <p>
+        Managing the data is relatively straightforward, you simply navigate through sections under EXPLORER to add or change database entries.</br>
+        Be sure to take advantages of the GUI filters on the left side I created to make browsing through all songs easier.</br>
+        I've also configured the admin settings such that a slug will automatically generate for every new item.</br>
+        </p>
+    </section>
+{% endblock content %}

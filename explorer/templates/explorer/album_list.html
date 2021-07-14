@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer\album_list.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div id="albums">
+        <h1>Albums</h1>
+        {% if albums %}
+            <ul>
+                {% for album in albums %}
+                    <li>
+                        <a href="{% url 'album_detail_page' album.slug %}">{{ album.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p>Number of Albums: {{ albums.count }}</p>
+        {% else %}
+            <p>There are no albums to display</p>
+        {% endif %}
+    </div>
+{% endblock content %}

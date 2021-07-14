@@ -1,0 +1,26 @@
+#albums {
+    padding:8rem 15%;
+}
+
+ul {
+    list-style: none;    
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: .5rem;
+}
+
+#albums a {
+    text-decoration: none;
+    color: black;
+}
+
+#albums a:hover,
+#albums a:active {
+  color: #808080;
+  text-decoration: none;
+}
+#albums a:visited {
+    text-decoration: none;
+}

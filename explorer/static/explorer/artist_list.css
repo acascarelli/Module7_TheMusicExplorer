@@ -1,0 +1,26 @@
+#artists {
+    padding:8rem 15%;
+}
+
+ul {
+    list-style: none;    
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: .5rem;
+}
+
+#artists a {
+    text-decoration: none;
+    color: black;
+}
+
+#artists a:hover,
+#artists a:active {
+  color: #808080;
+  text-decoration: none;
+}
+#artists a:visited {
+    text-decoration: none;
+}

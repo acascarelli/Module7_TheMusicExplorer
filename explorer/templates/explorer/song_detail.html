@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ song.title }}{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer/song_detail.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="summary">
+        {{ song.audio_link|safe }}
+    </section>
+{% endblock content %}

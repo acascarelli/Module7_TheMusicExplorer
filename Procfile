@@ -1,0 +1,1 @@
+web: gunicorn --chdir music_site music_site.wsgi

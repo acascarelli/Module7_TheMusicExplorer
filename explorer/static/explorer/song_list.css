@@ -1,0 +1,26 @@
+#songs {
+    padding:8rem 15%;
+}
+
+ul {
+    list-style: none;    
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: .5rem;
+}
+
+#songs a {
+    text-decoration: none;
+    color: black;
+}
+
+#songs a:hover,
+#songs a:active {
+  color: #808080;
+  text-decoration: none;
+}
+#songs a:visited {
+    text-decoration: none;
+}

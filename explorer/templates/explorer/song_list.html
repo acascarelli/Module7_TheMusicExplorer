@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'explorer\song_list.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div id="songs">
+        <h1>Songs</h1>
+        {% if songs %}
+            <ul>
+                {% for song in songs %}
+                    <li>
+                        <a href="{% url 'song_detail_page' song.slug %}">{{ song.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p>Number of Songs: {{ songs.count }}</p>
+        {% else %}
+            <p>There are no songs to display</p>
+        {% endif %}
+    </div>
+{% endblock content %}
